@@ -51,6 +51,9 @@ for page_start in range(0, 100, 20):
 ##水仙花数
 
 num = int(input("input please:"))
-num_0 = num/100
-num_1 = num
-
+num_0 =int(num / 100)
+num_1 = int(num % 100 / 10)
+num_2 = int(num % 10)
+print(num_0+" "+num_1+" "+num_2)
+if((num_0 * num_0 * num_0 + num_1 * num_1 * num_1 + num_2 * num_2 * num_2) == num):
+    print("这是一个水仙花数！")
