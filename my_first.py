@@ -1,6 +1,7 @@
 import random
 import math
 import requests
+
 '''
 //构建*号塔
 row = int(input('请输入行数: '))
@@ -48,12 +49,28 @@ for page_start in range(0, 100, 20):
     for movie in results["subjects"]:
         print(movie["title"], movie["rate"])
 '''
-##水仙花数
 
-num = int(input("input please:"))
-num_0 =int(num / 100)
-num_1 = int(num % 100 / 10)
-num_2 = int(num % 10)
-print(num_0+" "+num_1+" "+num_2)
-if((num_0 * num_0 * num_0 + num_1 * num_1 * num_1 + num_2 * num_2 * num_2) == num):
-    print("这是一个水仙花数！")
+##水仙花数
+while True:
+    num = int(input("input please:"))
+    num_0 = int(num / 100)
+    num_1 = int(num % 100 / 10)
+    num_2 = int(num % 10)
+    num_re = 0
+    num_real = num
+    print("num_0=%d num_1=%d num_2=%d" % (num_0, num_1, num_2))
+    if (num_0 * num_0 * num_0 + num_1 * num_1 * num_1 + num_2 * num_2 * num_2) == num:
+        print("%d是一个水仙花数！" % num)
+    else:
+        print("%d不是一个水仙花数" % num)
+    while num > 0:
+        num_re = num_re * 10 + num % 10
+        num = num // 10
+        ##if num == 0:
+        ##错误示范
+        ##    num_re = num_re * 10
+    print("%d的反转数为：%d" % (num_real, num_re))
+
+
+
+
