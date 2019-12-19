@@ -196,6 +196,7 @@ print(add1(1, 3, 5, 7, 9))
 #nihaowua spider，php to python
 """
 
+"""
 import requests
 import random
 from lxml import etree
@@ -275,6 +276,7 @@ def main_keep():  # 写入txt文本程序
 if __name__ == '__main__':
     main_print()
 
+"""
 
 # import sys
 # import time
@@ -287,6 +289,8 @@ if __name__ == '__main__':
 # from random import randint
 
 
+
+
 def num_auto(n_c):
     return n_c * n_c
 
@@ -295,3 +299,4 @@ n = 1
 while n > 0:
     input1 = int(input("please input:"))
     print(num_auto(input1))
+    
